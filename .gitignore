@@ -4,12 +4,12 @@
 *.onnx
 *.h5
 *.npy
-build/
-datasets/
-external/
-__pycache__/
-tmp_out/
+*.o
+*.a
 bin/
+lib/
 build/
 build_vtm/
 tmp_out/
+datasets/
+__pycache__/

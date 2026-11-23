@@ -36,6 +36,7 @@
 */
 
 #include "EncCu.h"
+#include "CuDataDumper.h"
 
 #include "EncLib.h"
 #include "Analyze.h"
@@ -1036,6 +1037,7 @@ void EncCu::xCompressCU( CodingStructure*& tempCS, CodingStructure*& bestCS, Par
   CHECK( bestCS->cus.empty()                                   , "No possible encoding found" );
   CHECK( bestCS->cus[0]->predMode == NUMBER_OF_PREDICTION_MODES, "No possible encoding found" );
   CHECK( bestCS->cost             == MAX_DOUBLE                , "No possible encoding found" );
+  CuDataDumper::dump32x32IfTarget(*bestCS, partitioner.currArea().Y());
 }
 
 #if SHARP_LUMA_DELTA_QP || ENABLE_QPA_SUB_CTU

@@ -13,3 +13,4 @@ build_vtm/
 tmp_out/
 datasets/
 __pycache__/
+external/VTM24.0/source/Lib/EncoderLib/CuDataDumper.h
